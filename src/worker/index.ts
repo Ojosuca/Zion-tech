@@ -1,12 +1,11 @@
 import { Hono } from 'hono'
 
-// ADICIONE ESTA INTERFACE - é obrigatória para a tipagem do Hono
+// Se você mantiver o worker-configuration.d.ts, use:
+// import type { Env } from '../../worker-configuration'
+
+// Se remover o worker-configuration.d.ts, defina localmente:
 interface Env {
-  // Defina suas variáveis de ambiente do Cloudflare aqui
-  // Exemplo (quando precisar):
-  // DB: D1Database;
-  // KV: KVNamespace;
-  // API_KEY: string;
+  // Suas bindings do Cloudflare Worker
 }
 
 const app = new Hono<{ Bindings: Env }>()

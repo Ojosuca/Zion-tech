@@ -1,5 +1,18 @@
-import { Hono } from "hono";
+import { Hono } from 'hono'
 
-const app = new Hono<{ Bindings: Env }>();
+// ADICIONE ESTA INTERFACE - é obrigatória para a tipagem do Hono
+interface Env {
+  // Defina suas variáveis de ambiente do Cloudflare aqui
+  // Exemplo (quando precisar):
+  // DB: D1Database;
+  // KV: KVNamespace;
+  // API_KEY: string;
+}
 
-export default app;
+const app = new Hono<{ Bindings: Env }>()
+
+app.get('/', (c) => {
+  return c.text('Hello Hono!')
+})
+
+export default app

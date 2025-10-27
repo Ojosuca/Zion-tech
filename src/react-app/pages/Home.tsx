@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { ContainerScroll } from '@/react-app/components/ui/container-scroll-animation';
 import { LandingAccordionItem } from '@/react-app/components/ui/interactive-image-accordion';
 import StackFeatureSection from '@/react-app/components/ui/stack-feature-section';
@@ -7,7 +7,7 @@ import { InfiniteMovingCards } from '@/react-app/components/ui/infinite-moving-c
 import { NavBar } from '@/react-app/components/ui/tubelight-navbar';
 import { TeamSection } from '@/react-app/components/ui/team-member-card';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code, Palette, Zap, Globe, Users, Star, Home as HomeIcon, User, Briefcase, Mail, Target, Eye, X } from 'lucide-react';
+import { ArrowRight, Code, Home as HomeIcon, User, Briefcase, Mail } from 'lucide-react';
 
 
 
@@ -127,60 +127,7 @@ export default function Home() {
     },
   ];
 
-  const services = [
-    {
-      title: "Desenvolvimento Web Moderno",
-      description:
-        "Criamos sites e aplicações web responsivas com as mais recentes tecnologias. React, Next.js, TypeScript e frameworks modernos para garantir performance e escalabilidade excepcionais.",
-      content: (
-        <div className="h-full w-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white rounded-lg">
-          <div className="text-center">
-            <Code className="w-16 h-16 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold">Desenvolvimento Web</h3>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Design UI/UX Impactante",
-      description:
-        "Designs que convertem visitantes em clientes. Criamos interfaces intuitivas e experiências de usuário memoráveis, seguindo as melhores práticas de usabilidade e acessibilidade.",
-      content: (
-        <div className="h-full w-full bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center text-white rounded-lg">
-          <div className="text-center">
-            <Palette className="w-16 h-16 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold">Design UI/UX</h3>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Otimização e Performance",
-      description:
-        "Sites rápidos e otimizados para SEO. Garantimos carregamento instantâneo e excelente posicionamento nos mecanismos de busca, aumentando sua visibilidade online.",
-      content: (
-        <div className="h-full w-full bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-white rounded-lg">
-          <div className="text-center">
-            <Zap className="w-16 h-16 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold">Performance</h3>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Soluções Completas",
-      description:
-        "Da concepção ao deploy, oferecemos soluções completas para sua presença digital. Hospedagem, manutenção, suporte e evolução contínua do seu projeto tecnológico.",
-      content: (
-        <div className="h-full w-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white rounded-lg">
-          <div className="text-center">
-            <Globe className="w-16 h-16 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold">Soluções Completas</h3>
-          </div>
-        </div>
-      ),
-    },
-  ];
+  
 
   const navItems = [
     { name: 'Home', url: '#home', icon: HomeIcon },

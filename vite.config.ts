@@ -8,7 +8,8 @@ export default defineConfig({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   plugins: [...mochaPlugins(process.env as any), react(), cloudflare()],
   server: {
-    allowedHosts: true,
+    // REMOVi essa linha: allowedHosts: true,
+    host: true, // Adicione esta linha para permitir conexões externas
   },
   build: {
     chunkSizeWarningLimit: 5000,

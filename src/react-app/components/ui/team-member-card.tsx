@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/react-app/components/ui/card";
-import { X, Github, Linkedin, Mail, Code, Palette, Server, Smartphone, MapPin, Calendar, Star, Coffee } from "lucide-react";
+import { Card, CardContent } from "@/react-app/components/ui/card";
+import { X, Github, Linkedin, Mail, Code, Palette, MapPin, Calendar, Star, Coffee } from "lucide-react";
 
 interface TeamMember {
   id: string;
